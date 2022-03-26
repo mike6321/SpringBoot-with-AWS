@@ -34,7 +34,7 @@ public class PostsRepositoryTest {
     @Test
     public void 게시글저장_불러오기() {
 
-        //givne
+        //given
         String title = "테스트 게시글";
         String content = "테스트 본문";
 
