@@ -3,8 +3,10 @@ package me.choi.book.springboot.config.auth;
 import lombok.Getter;
 import me.choi.book.springboot.domain.user.User;
 
+import java.io.Serializable;
+
 @Getter
-public class SessionUser {
+public class SessionUser implements Serializable {
 
     private String name;
     private String email;
@@ -15,4 +17,5 @@ public class SessionUser {
         this.email = user.getEmail();
         this.picture = user.getPicture();
     }
+
 }

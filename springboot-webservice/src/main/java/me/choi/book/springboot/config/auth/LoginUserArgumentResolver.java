@@ -1,6 +1,7 @@
 package me.choi.book.springboot.config.auth;
 
 import lombok.RequiredArgsConstructor;
+import me.choi.book.springboot.domain.user.User;
 import org.springframework.core.MethodParameter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.support.WebDataBinderFactory;
@@ -20,7 +21,6 @@ public class LoginUserArgumentResolver implements HandlerMethodArgumentResolver 
     public boolean supportsParameter(MethodParameter parameter) {
         boolean isLoginUserAnnotation = parameter.getParameterAnnotation(LoginUser.class) != null;
         boolean isUserClass = SessionUser.class.equals(parameter.getParameterType());
-
         return isLoginUserAnnotation && isUserClass;
     }
 
